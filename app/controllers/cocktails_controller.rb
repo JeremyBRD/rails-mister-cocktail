@@ -42,7 +42,7 @@ before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :ingredients, :doses)
+    params.require(:cocktail).permit(:name, :picture_url)
   end
 
   def set_cocktail

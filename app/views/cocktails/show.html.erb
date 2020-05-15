@@ -1,1 +1,10 @@
-show.html.erb
+<h1><%= @cocktail.name %></h1>
+
+<ul>
+  <li>ingredients: <%= @cocktail.ingredients %></li>
+  <li>doses: <%= @cocktail.doses %></li>
+</ul>
+
+<%= link_to "Delete #{@cocktail.name}'s profile", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+<hr>
+<%= link_to "Go back to cocktails list", cocktails_path %>
